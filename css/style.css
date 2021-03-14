@@ -23,6 +23,10 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
 /* --ALL PAGES-- */
 .button-link {
   font-weight: normal;
@@ -51,6 +55,11 @@ body {
   background: #222222;
 }
 
+.header__right > :nth-child(n),
+.header__left > :nth-child(n) {
+  cursor: pointer;
+}
+
 .header__left > :not(:first-child) {
   margin-left: 44px;
 }
@@ -67,11 +76,30 @@ body {
   position: absolute;
   top: 75px;
   right: 0px;
+  z-index: 2;
   width: 232px;
   padding: 37px 34px;
   min-height: 764px;
   background-color: white;
-  border: 1px solid #F16D7F;
+  -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+          box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  border: 1px solid #F26376;
+}
+
+.navigation__close-button {
+  padding: 16px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.navigation__close-button:hover {
+  background-color: #F26376;
+}
+
+.navigation__close-button:hover svg path {
+  fill: white;
 }
 
 .navigation__heading {
@@ -110,11 +138,15 @@ body {
 }
 
 .navigation__list_first-level > li > a {
-  color: #F16D7F;
+  color: #F26376;
 }
 
 .navigation__list_second-level > li > a {
   color: #6F6E6E;
+}
+
+.navigation__list_second-level > li > a:hover {
+  color: #F26376;
 }
 
 /* --PREVIEW-- */
@@ -143,7 +175,7 @@ body {
 .preview__heading {
   font-weight: 900;
   color: #222222;
-  border-left: 12px solid #F16D7F;
+  border-left: 12px solid #F26376;
   padding-left: 16px;
 }
 
@@ -159,7 +191,7 @@ body {
 }
 
 .pink {
-  color: #F16D7F;
+  color: #F26376;
 }
 
 @media (max-width: 1600px) {
@@ -363,7 +395,7 @@ body {
 
 .products__button:hover {
   color: white;
-  background-color: #F16D7F;
+  background-color: #F26376;
 }
 
 /* --SPECIAL-OFFERS-- */
@@ -507,7 +539,7 @@ body {
   width: 100px;
   text-align: center;
   color: #FFFFFF;
-  background: #E05C6E;
+  background: #F26376;
   border-radius: 0 25px 25px 0;
 }
 
@@ -545,11 +577,136 @@ body {
 }
 
 .social-icons__link:hover > svg > path:first-child {
-  fill: #E05C6E;
+  fill: #F26376;
 }
 
 .social-icons__link:hover > svg > g > path,
 .social-icons__link:hover > svg > path:not(:first-child) {
   fill: white;
+}
+
+.breadcrumbs {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: #F8F3F4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.breadcrumbs__paragraph {
+  font-size: 24px;
+  line-height: 31px;
+  color: #F26376;
+}
+
+.breadcrumbs__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+.breadcrumbs__link {
+  margin-right: 6px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #636363;
+}
+
+.breadcrumbs__element:not(:last-child) {
+  margin-right: 6px;
+}
+
+.breadcrumbs__element:not(:last-child)::after {
+  content: '/';
+  color: #636363;
+}
+
+.breadcrumbs__element:last-child a {
+  font-weight: bold;
+  color: #F26376;
+}
+
+.filter-and-sort {
+  padding: 16px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.filter {
+  margin-right: 304px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.filter > :first-child {
+  margin-left: 16px;
+  margin-right: 11px;
+}
+
+.sort {
+  font-size: 14px;
+  line-height: 17px;
+  color: #6F6E6E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sort__value > :first-child {
+  margin-right: 10px;
+}
+
+.sort__value:not(:last-child) {
+  margin-right: 28px;
+}
+
+.filter,
+.sort__value {
+  cursor: pointer;
+}
+
+.pagination {
+  width: 284px;
+  padding: 16px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #EBEBEB;
+  border-radius: 3px;
+}
+
+.pagination__button {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #EBEBEB;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.pagination__button_active {
+  color: #F26376;
 }
 /*# sourceMappingURL=style.css.map */

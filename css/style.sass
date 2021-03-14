@@ -1,3 +1,6 @@
+@import vars
+    
+    
 *
     margin: 0
     padding: 0
@@ -17,16 +20,19 @@
 body
     font-family: 'Lato', sans-serif
 
+.hidden 
+    display: none
+
 /* --ALL PAGES-- */
 
 .button-link
     font-weight: normal
     font-size: 16px
     line-height: 19px
-    color: #F26376
+    color: $mainColor
     text-decoration: none
     padding: 15px 39px
-    border: 1px solid #F26376
+    border: 1px solid $mainColor
 
 /* --HEADER-- */
 
@@ -38,6 +44,10 @@ body
     align-items: flex-end
     position: relative
     background: #222222
+
+    &__right > :nth-child(n),
+    &__left > :nth-child(n)
+        cursor: pointer
 
     &__left > :not(:first-child)
         margin-left: 44px
@@ -52,11 +62,26 @@ body
     position: absolute
     top: 75px
     right: 0px
+    z-index: 2
     width: 232px
     padding: 37px 34px
     min-height: 764px
     background-color: white
-    border: 1px solid #F16D7F
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    border: 1px solid $mainColor
+
+    &__close-button
+        padding: 16px
+        position: absolute
+        top: 0
+        right: 0
+        cursor: pointer
+
+        &:hover
+            background-color: $mainColor
+
+            & svg path
+                fill: white
 
     &__heading
         margin-bottom: 24px
@@ -89,10 +114,13 @@ body
             line-height: 17px
 
         &_first-level > li > a
-            color: #F16D7F
+            color: $mainColor
 
         &_second-level > li > a
             color: #6F6E6E
+
+            &:hover
+                color: $mainColor
 
 /* --PREVIEW-- */
 
@@ -115,7 +143,7 @@ body
     &__heading
         font-weight: 900
         color: #222222
-        border-left: 12px solid #F16D7F
+        border-left: 12px solid $mainColor
         padding-left: 16px
 
 .up-case
@@ -128,7 +156,7 @@ body
     letter-spacing: 1.5px
 
 .pink
-    color: #F16D7F
+    color: $mainColor
 
 @media (max-width: 1600px)
     .preview__container
@@ -286,7 +314,7 @@ body
 
     &:hover
         color: white
-        background-color: #F16D7F
+        background-color: $mainColor
 
 /* --SPECIAL-OFFERS-- */
 
@@ -393,7 +421,7 @@ body
         width: 100px
         text-align: center
         color: #FFFFFF
-        background: #E05C6E
+        background: $mainColor
         border-radius: 0 25px 25px 0
 
 /* --FOOTER-- */
@@ -419,9 +447,14 @@ body
         margin-right: 7px
 
     &__link:hover > svg > path:first-child
-        fill: #E05C6E
+        fill: $mainColor
 
     &__link:hover > svg > g > path,
 
     &__link:hover > svg > path:not(:first-child)
         fill: white
+
+
+@import breadcrumbs
+@import filter-and-sort
+@import pagination

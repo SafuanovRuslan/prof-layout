@@ -1,0 +1,31 @@
+@import vars
+
+.filter-and-sort
+    padding: 16px 0
+    display: flex
+
+.filter
+    margin-right: 304px
+    font-weight: 600
+    font-size: 14px
+    line-height: 17px
+
+    & > :first-child
+        margin-left: 16px
+        margin-right: 11px
+        
+.sort
+    font-size: 14px
+    line-height: 17px
+    color: #6F6E6E
+    display: flex
+
+    &__value > :first-child
+        margin-right: 10px
+
+    &__value:not(:last-child)
+        margin-right: 28px
+
+.filter,
+.sort__value
+    cursor: pointer
