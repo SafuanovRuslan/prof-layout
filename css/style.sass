@@ -1,10 +1,21 @@
 @import vars
-    
-    
+
 *
     margin: 0
     padding: 0
     box-sizing: border-box
+
+summary
+    outline: none
+
+summary::-webkit-details-marker
+    display: none
+
+summary::after
+    content: ""
+
+details[open] summary::after
+    content: ""
 
 .center
     padding-left: calc(50% - 570px)
@@ -20,8 +31,8 @@
 body
     font-family: 'Lato', sans-serif
 
-.hidden 
-    display: none
+.hidden
+    display: none!important
 
 /* --ALL PAGES-- */
 
@@ -33,6 +44,7 @@ body
     text-decoration: none
     padding: 15px 39px
     border: 1px solid $mainColor
+    transition: .3s
 
 /* --HEADER-- */
 
@@ -48,11 +60,12 @@ body
     &__right > :nth-child(n),
     &__left > :nth-child(n)
         cursor: pointer
+        text-decoration: none
 
     &__left > :not(:first-child)
         margin-left: 44px
 
-    &__right > svg:not(:last-child)
+    &__right > :not(:last-child)
         margin-right: 33px
 
 .logo
@@ -96,7 +109,7 @@ body
 
     &__list_first-level > li:nth-child(2n + 1)
         margin-bottom: 12px
-        
+
     &__list_first-level > li:nth-child(2n):not(:last-child)
         margin-bottom: 20px
 
@@ -157,6 +170,8 @@ body
 
 .pink
     color: $mainColor
+    & svg path
+        fill: $mainColor
 
 @media (max-width: 1600px)
     .preview__container
@@ -252,13 +267,14 @@ body
         background: #F8F8F8
         position: relative
 
+        & a img
+            transition: .3s
         &:hover a img
             filter: brightness(0.5)
 
         &:hover .add-to-cart
             display: flex
 
-    
     &__info
         padding: 0 18px
 
@@ -300,6 +316,7 @@ body
     top: 188px
     left: 111px
     position: absolute
+    transition: .3s
 
     &:hover
         color: black
@@ -402,6 +419,7 @@ body
     &__input,
 
     &__button
+        outline: none
         height: 50px
         font-size: 14px
         line-height: 17px
@@ -454,8 +472,10 @@ body
     &__link:hover > svg > path:not(:first-child)
         fill: white
 
-
 @import breadcrumbs
 @import filter-and-sort
 @import pagination
 @import product-page
+@import cart
+@import registration
+@import form
