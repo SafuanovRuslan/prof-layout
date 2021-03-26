@@ -21,6 +21,12 @@ details[open] summary::after {
   content: "";
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .center {
   padding-left: calc(50% - 570px);
   padding-right: calc(50% - 570px);
@@ -988,6 +994,14 @@ body {
   margin-bottom: 40px;
 }
 
+.cart__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  color: #222222;
+}
+
 .cart__img {
   width: 262px;
 }
@@ -998,7 +1012,6 @@ body {
 }
 
 .cart__name {
-  color: #222222;
   margin-bottom: 42px;
   font-weight: normal;
 }
