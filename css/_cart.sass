@@ -5,6 +5,8 @@
     justify-content: space-between
     padding-top: 96px
     padding-bottom: 128px
+    padding-left: calc(50% - 570px)
+    padding-right: calc(50% - 570px)
 
     &__products
         width: 652px
@@ -124,3 +126,73 @@
         & > span
             font-weight: 400
 
+@media (max-width: 1200px)
+    .cart
+        flex-direction: column
+        padding-left: calc(50% - 368px)
+        padding-right: calc(50% - 368px)
+        &__products
+            width: 736px
+
+        &__product
+            width: 100%
+
+        &__buttons
+            justify-content: space-around
+            margin-bottom: 64px
+
+        &__input-box,
+        &__send-box
+            width: 360px
+
+        &__send-box
+            margin-top: 39px
+
+@media (max-width: 767px)
+    .cart
+        width: 375px
+        padding-left: calc(50% - 179px)
+        padding-top: 40px
+        padding-bottom: 96px
+        &__products
+            width: 358px
+        &__product
+            width: 358px
+            flex-wrap: nowrap
+            &:not(:last-child)
+                margin-bottom: 32px
+        &__img
+            width: 144px
+            height: 188px
+        &__info
+            padding-top: 13px
+            padding-left: 13px
+        &__name
+            margin-bottom: 26px
+            width: 144px
+            font-size: 16px
+            line-height: 19px
+        &__parameter
+            font-size: 14px
+            line-height: 17px
+            &:not(:last-child)
+                margin-bottom: 4px
+        &__quantity
+            font-size: 10px
+            line-height: 12px
+            padding: 1px 4px
+            width: 30px
+            margin-left: 12px
+        &__buttons
+            margin-top: 30px
+            margin-bottom: 48px
+        &__button
+            font-size: 12px
+            line-height: 14px
+            padding: 9px
+        &__send-box
+            margin-top: 48px
+        &__delete
+            top: 14px
+            right: 12px
+            width: 10px
