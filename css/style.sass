@@ -422,7 +422,6 @@ body
         display: flex
 
     &__input,
-
     &__button
         outline: none
         height: 50px
@@ -434,11 +433,9 @@ body
         width: 256px
         padding: 6px 22px
         overflow: hidden
-        color: #222224
-        opacity: 0.67
+        color: #222222
         background: #E1E1E1
         border-radius: 25px 0 0 25px
-        outline: none
 
     &__button
         width: 100px
@@ -468,6 +465,9 @@ body
     &__link:not(:last-child)
         display: inline-block
         margin-right: 7px
+    
+    &__link > svg > path
+        transition: .3s
 
     &__link:hover > svg > path:first-child
         fill: $mainColor
@@ -484,3 +484,7 @@ body
 @import cart
 @import registration
 @import form
+
+@import style-1200
+@import style-767
+@import style-374

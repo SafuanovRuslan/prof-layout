@@ -565,11 +565,9 @@ body {
   width: 256px;
   padding: 6px 22px;
   overflow: hidden;
-  color: #222224;
-  opacity: 0.67;
+  color: #222222;
   background: #E1E1E1;
   border-radius: 25px 0 0 25px;
-  outline: none;
 }
 
 .subscribe__button {
@@ -611,6 +609,11 @@ body {
 .social-icons__link:not(:last-child) {
   display: inline-block;
   margin-right: 7px;
+}
+
+.social-icons__link > svg > path {
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .social-icons__link:hover > svg > path:first-child {
@@ -1260,5 +1263,177 @@ body {
 
 .width-auto {
   width: auto;
+}
+
+@media (max-width: 1200px) {
+  .center {
+    padding-left: calc(50% - 368px);
+    padding-right: calc(50% - 368px);
+  }
+  .preview {
+    height: 368px;
+  }
+  .preview__container {
+    max-width: 736px;
+    padding-left: 407px;
+  }
+  .up-case {
+    font-size: 44px;
+  }
+  .normal-case {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+  .special-offers {
+    padding-top: 48px;
+    padding-bottom: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .special-offers > :not(:last-child) {
+    margin-bottom: 48px;
+  }
+  .subscribe {
+    padding-top: 64px;
+    padding-bottom: 140px;
+    background-position-x: -250px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .subscribe > :not(:last-child) {
+    margin-bottom: 48px;
+  }
+  .deals__element-small {
+    width: 232px;
+    height: 168px;
+  }
+  .deals__element-big {
+    width: 735px;
+    height: 116px;
+  }
+  .deals__element_women, .deals__element_men, .deals__element_kids, .deals__element_accesories {
+    background-size: contain;
+  }
+}
+
+@media (max-width: 767px) {
+  .center {
+    padding-left: calc(50% - 171.5px);
+    padding-right: calc(50% - 171.5px);
+  }
+  .header__right > :first-child {
+    margin-right: 0;
+  }
+  .header__right > :not(:first-child) {
+    display: none;
+  }
+  .navigation {
+    width: 100%;
+    min-height: calc(100vh - 75px);
+  }
+  .preview__container {
+    padding-left: 0;
+    background-image: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .up-case {
+    font-size: 38px;
+    line-height: 36px;
+  }
+  .normal-case {
+    font-size: 18px;
+  }
+  .subscribe {
+    background-position-x: -500px;
+  }
+  .subscribe__form {
+    width: 100%;
+  }
+  .subscribe > :not(:last-child) {
+    margin-bottom: 48px;
+  }
+  .deals > :not(:last-child) {
+    margin-bottom: 0;
+  }
+  .deals__elements {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .deals__element-small {
+    width: 343px;
+    height: 247px;
+    margin-bottom: 32px;
+  }
+  .deals__element-big {
+    width: 343px;
+    height: 111px;
+  }
+  .products {
+    padding-left: calc(50% - 180px);
+    padding-right: calc(50% - 180px);
+  }
+  .footer {
+    padding-top: 43px;
+    padding-bottom: 9px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .social-icons {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 374px) {
+  .center {
+    padding-left: calc(50% - 155px);
+    padding-right: calc(50% - 155px);
+  }
+  .subscribe__form {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  .deals > :not(:last-child) {
+    margin-bottom: 0;
+  }
+  .deals__elements {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .deals__element-small, .deals__element-big {
+    width: 310px;
+  }
+  .deals__element_women, .deals__element_men, .deals__element_kids, .deals__element_accesories {
+    background-size: cover;
+  }
+  .products {
+    padding-left: calc(50% - 160px);
+    padding-right: calc(50% - 160px);
+  }
+  .product__card {
+    width: 320px;
+  }
+  .product__card a img {
+    width: 320px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
