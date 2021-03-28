@@ -14,6 +14,7 @@
         border: none
         outline: none
         cursor: pointer
+        z-index: 1
 
         &:hover > svg > path
             fill: $mainColor
@@ -82,3 +83,34 @@
         height: 1px
         margin: 64px 0
         border: 1px solid #EAEAEA
+
+@media (max-width: 1200px)
+    .product-slider
+        height: 624px
+        & > img
+            width: 466px
+
+    .product-description
+        width: 100%
+        margin-top: 0
+
+@media (max-width: 767px)
+    .product-slider
+        height: 500px
+        position: relative
+        & > img
+            width: 375px
+            position: absolute
+            left: calc(50% - 187.5px)
+
+    .product-description
+        &__product-name
+            width: 280px
+            text-align: center
+        &__text
+            width: 335px
+        &__second-line
+            width: 100%
+            margin: 31px 0 48px
+        &__sort
+            width: 330px
