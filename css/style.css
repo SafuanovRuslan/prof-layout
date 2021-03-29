@@ -626,6 +626,10 @@ body {
   fill: white;
 }
 
+.mobile-only {
+  display: none;
+}
+
 .breadcrumbs {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1654,6 +1658,9 @@ body {
   }
   .social-icons {
     margin-bottom: 40px;
+  }
+  .mobile-only {
+    display: block;
   }
 }
 
